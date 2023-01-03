@@ -1,9 +1,9 @@
 module.exports = {
     extends: ['@antfu'],
     rules: {
-        // antfu 配置覆盖，主要是 indent
+        // 其实就是对 antfu 配置的一些覆盖
 
-        'indent': ['warn', 4],
+        indent: ['warn', 4],
         '@typescript-eslint/indent': ['warn', 4],
         'jsonc/indent': ['warn', 4],
         'vue/html-indent': ['warn', 4],
