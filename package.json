@@ -1,6 +1,6 @@
 {
     "name": "@unnb/eslint-config",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "Wythe's ESLint config",
     "author": "Wythe Zhao",
     "license": "ISC",
@@ -9,9 +9,7 @@
         "eslint-config"
     ],
     "scripts": {
-        "env:set": "proxy && nrm use npm",
-        "env:unset": "nrm use taobao && unproxy",
-        "release": "pnpm env:set && bumpp --commit --tag --push && pnpm publish --access public && pnpm env:unset"
+        "release": "nrm use npm && bumpp --commit --tag --push && pnpm publish --access public"
     },
     "main": "index.cjs",
     "files": [
