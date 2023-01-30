@@ -5,7 +5,7 @@
 #### Install
 
 ```bash
-pnpm i -D @unnb/eslint-config
+pnpm i -D @zhaojiakuncn/eslint-config
 ```
 
 #### Config
@@ -14,7 +14,7 @@ Create `.eslintrc` file in your project root directory, and add the following co
 
 ```json
 {
-    "extends": "@unnb"
+    "extends": "@zhaojiakuncn"
 }
 ```
 
@@ -23,7 +23,7 @@ Or add the following content to your `package.json`:
 ```json
 {
     "eslintConfig": {
-        "extends": "@unnb"
+        "extends": "@zhaojiakuncn"
     }
 }
 ```

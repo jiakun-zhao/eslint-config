@@ -1,6 +1,6 @@
 {
     "name": "@zhaojiakuncn/eslint-config",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Zhaojiakun's ESLint config",
     "author": "Jiakun Zhao",
     "license": "ISC",
