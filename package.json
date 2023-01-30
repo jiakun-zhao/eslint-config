@@ -1,7 +1,7 @@
 {
-    "name": "@unnb/eslint-config",
-    "version": "0.1.2",
-    "description": "Wythe's ESLint config",
+    "name": "@zhaojiakuncn/eslint-config",
+    "version": "0.1.3",
+    "description": "Zhaojiakun's ESLint config",
     "author": "Wythe Zhao",
     "license": "ISC",
     "homepage": "https://github.com/unnb/eslint-config",
