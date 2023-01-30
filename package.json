@@ -1,16 +1,13 @@
 {
-    "name": "@unnb/eslint-config",
-    "version": "0.1.5",
+    "name": "@zhaojiakuncn/eslint-config",
+    "version": "1.0.0",
     "description": "Zhaojiakun's ESLint config",
-    "author": "Wythe Zhao",
+    "author": "Jiakun Zhao",
     "license": "ISC",
-    "homepage": "https://github.com/unnb/eslint-config",
+    "homepage": "https://github.com/zhaojiakuncn/eslint-config",
     "keywords": [
         "eslint-config"
     ],
-    "scripts": {
-        "release": "nrm use npm && bumpp --commit --tag --push && pnpm publish --access public"
-    },
     "main": "index.cjs",
     "files": [
         "index.cjs",
