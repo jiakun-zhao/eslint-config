@@ -1,6 +1,6 @@
 {
     "name": "@jiakun-zhao/eslint-config",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Jiakun Zhao's ESLint config",
     "author": "Jiakun Zhao <jiakun.zhao@outlook.com>",
     "license": "ISC",
@@ -17,9 +17,9 @@
         "eslint": ">=7.4.0"
     },
     "dependencies": {
-        "@antfu/eslint-config": "^0.34.2"
+        "@antfu/eslint-config": "^0.35.2"
     },
     "devDependencies": {
-        "eslint": "^8.33.0"
+        "eslint": "^8.34.0"
     }
 }
