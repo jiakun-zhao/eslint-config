@@ -1,6 +1,6 @@
 {
     "name": "@jiakun-zhao/eslint-config",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Jiakun Zhao's ESLint config",
     "keywords": [
         "eslint-config"
