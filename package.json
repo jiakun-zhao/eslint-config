@@ -2,24 +2,27 @@
     "name": "@jiakun-zhao/eslint-config",
     "version": "0.0.4",
     "description": "Jiakun Zhao's ESLint config",
-    "author": "Jiakun Zhao <jiakun.zhao@outlook.com>",
-    "license": "ISC",
-    "homepage": "https://github.com/jiakun-zhao/eslint-config",
     "keywords": [
         "eslint-config"
     ],
+    "homepage": "https://github.com/jiakun-zhao/eslint-config",
+    "license": "ISC",
+    "author": "Jiakun Zhao <jiakun.zhao@outlook.com>",
     "main": "index.cjs",
     "files": [
         "index.cjs",
         "package.json"
     ],
-    "peerDependencies": {
-        "eslint": ">=7.4.0"
+    "eslintConfig": {
+        "extends": "@jiakun-zhao"
     },
     "dependencies": {
-        "@antfu/eslint-config": "^0.35.2"
+        "@antfu/eslint-config": "^0.37.0"
     },
     "devDependencies": {
-        "eslint": "^8.34.0"
+        "eslint": "^8.37.0"
+    },
+    "peerDependencies": {
+        "eslint": ">=7.4.0"
     }
 }
