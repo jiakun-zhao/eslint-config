@@ -1,6 +1,6 @@
 {
     "name": "@jiakun-zhao/eslint-config",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Jiakun Zhao's ESLint config",
     "keywords": [
         "eslint-config"
@@ -17,10 +17,10 @@
         "extends": "@jiakun-zhao"
     },
     "dependencies": {
-        "@antfu/eslint-config": "^0.37.0"
+        "@antfu/eslint-config": "^0.38.6"
     },
     "devDependencies": {
-        "eslint": "^8.37.0"
+        "eslint": "^8.40.0"
     },
     "peerDependencies": {
         "eslint": ">=7.4.0"
