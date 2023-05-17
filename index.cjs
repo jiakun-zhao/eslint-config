@@ -1,5 +1,15 @@
 module.exports = {
-  extends: ["@antfu"],
+  extends: ['@antfu', 'plugin:astro/recommended'],
+  overrides: [
+    {
+      files: ['*.astro'],
+      parser: 'astro-eslint-parser',
+      parserOptions: {
+        extraFileExtensions: ['.astro'],
+        parser: '@typescript-eslint/parser',
+      },
+    },
+  ],
   rules: {
     // 其实就是对 antfu 配置的一些覆盖
 
@@ -10,13 +20,13 @@ module.exports = {
     // 'yml/indent': ['warn', 4],
     // 'jsonc/indent': ['warn', 4],
 
-    "brace-style": ["warn", "1tbs"],
-    "@typescript-eslint/brace-style": ["warn", "1tbs"],
+    'brace-style': ['warn', '1tbs'],
+    '@typescript-eslint/brace-style': ['warn', '1tbs'],
 
-    "vue/singleline-html-element-content-newline": "off",
-    "vue/html-self-closing": "off",
-    "vue/static-class-names-order": "warn",
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/static-class-names-order': 'warn',
 
-    "no-console": "warn",
+    'no-console': 'warn',
   },
-};
+}
