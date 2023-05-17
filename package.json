@@ -1,28 +1,28 @@
 {
-    "name": "@jiakun-zhao/eslint-config",
-    "version": "0.0.6",
-    "description": "Jiakun Zhao's ESLint config",
-    "keywords": [
-        "eslint-config"
-    ],
-    "homepage": "https://github.com/jiakun-zhao/eslint-config",
-    "license": "ISC",
-    "author": "Jiakun Zhao <jiakun.zhao@outlook.com>",
-    "main": "index.cjs",
-    "files": [
-        "index.cjs",
-        "package.json"
-    ],
-    "eslintConfig": {
-        "extends": "@jiakun-zhao"
-    },
-    "dependencies": {
-        "@antfu/eslint-config": "^0.38.6"
-    },
-    "devDependencies": {
-        "eslint": "^8.40.0"
-    },
-    "peerDependencies": {
-        "eslint": ">=7.4.0"
-    }
+  "name": "@jiakun-zhao/eslint-config",
+  "version": "0.0.7",
+  "description": "Jiakun's ESLint config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "homepage": "https://github.com/jiakun-zhao/eslint-config",
+  "license": "ISC",
+  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
+  "main": "index.cjs",
+  "files": [
+    "index.cjs",
+    "package.json"
+  ],
+  "eslintConfig": {
+    "extends": "@jiakun-zhao"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^0.38.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  }
 }
