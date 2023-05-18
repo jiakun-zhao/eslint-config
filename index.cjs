@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@antfu', 'plugin:astro/recommended', '@raycast'],
+  extends: ['@antfu', 'plugin:astro/recommended'],
   overrides: [
     {
       files: ['*.astro'],

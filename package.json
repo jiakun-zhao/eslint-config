@@ -1,12 +1,11 @@
 {
   "name": "@jiakun-zhao/eslint-config",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Jiakun's ESLint config",
   "keywords": [
     "eslint-config",
     "antfu",
-    "astro",
-    "raycast"
+    "astro"
   ],
   "homepage": "https://github.com/jiakun-zhao/eslint-config",
   "license": "ISC",
@@ -21,7 +20,6 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^0.38.6",
-    "@raycast/eslint-config": "^1.0.5",
     "eslint-plugin-astro": "^0.27.0"
   },
   "devDependencies": {
