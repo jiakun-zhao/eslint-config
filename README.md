@@ -32,10 +32,23 @@ Install VS Code `ESLint` extension and create `.vscode/settings.json`
 
 ```json
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "editor.formatOnSave": false
-    // "prettier.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": false,
+  // "prettier.enable": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "astro",
+    "json",
+    "jsonc",
+    "json5",
+    "html",
+    "vue",
+    "mdx"
+  ]
 }
 ```
