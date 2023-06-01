@@ -10,11 +10,11 @@
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
   "main": ".eslintrc.cjs",
   "files": [
-    "overrides",
     ".eslintrc.cjs",
     "package.json"
   ],
   "scripts": {
+    "dev": "eslint playground",
     "release": "bumpp && pnpm publish"
   },
   "eslintConfig": {
@@ -24,7 +24,6 @@
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-astro": "^0.27.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.27.5",
@@ -32,7 +31,7 @@
     "eslint-plugin-mdx": "^2.1.0",
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-solid": "^0.12.1",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-vue": "^9.14.1",
     "jsonc-eslint-parser": "^2.3.0"
   },

@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "ESNext",
+    "jsx": "react-jsx",
     "module": "ESNext",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "target": "ESNext"
   },
-  "include": ["./playground/**/*.ts"],
-  "exclude": []
+  "exclude": [],
+  "include": ["./preview/**/*.ts"]
 }
