@@ -5,7 +5,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:solid/typescript',
-    'plugin:unocss/recommended',
   ],
   overrides: [
     require('./overrides/astro.cjs'),
