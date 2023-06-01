@@ -51,6 +51,7 @@ module.exports = {
     'react/jsx-closing-bracket-location': 'error',
     'react/jsx-boolean-value': ['error', 'never'],
     'react/destructuring-assignment': ['error', 'never'],
+    'react/no-unknown-property': 'off',
   },
   overrides: [
     {
@@ -70,7 +71,9 @@ module.exports = {
       files: ['*.mdx'],
       extends: 'plugin:mdx/recommended',
       rules: {
-        indent: 'off',
+        'indent': 'off',
+        'react/jsx-indent': 'off',
+        'react/jsx-equals-spacing': 'off',
       },
     },
     {
@@ -93,6 +96,9 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro'],
+      },
+      rules: {
+        'react/jsx-indent': 'off',
       },
     },
   ],
