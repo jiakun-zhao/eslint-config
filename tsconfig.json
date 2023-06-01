@@ -3,9 +3,7 @@
     "baseUrl": ".",
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node",
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js"
+    "moduleResolution": "node"
   },
   "include": ["./playground/**/*.ts"],
   "exclude": []

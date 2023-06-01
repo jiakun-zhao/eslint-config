@@ -2,7 +2,9 @@
   "name": "@jiakun-zhao/eslint-config",
   "version": "0.0.11",
   "description": "Jiakun's ESLint config",
-  "keywords": ["eslint-config"],
+  "keywords": [
+    "eslint-config"
+  ],
   "homepage": "https://github.com/jiakun-zhao/eslint-config",
   "license": "MIT",
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
@@ -11,6 +13,9 @@
     ".eslintrc.cjs",
     "package.json"
   ],
+  "scripts": {
+    "release": "bumpp && pnpm publish"
+  },
   "eslintConfig": {
     "extends": "@jiakun-zhao"
   },
@@ -31,9 +36,8 @@
     "jsonc-eslint-parser": "^2.3.0"
   },
   "devDependencies": {
-    "astro": "^2.5.6",
+    "bumpp": "^9.1.0",
     "eslint": "^8.41.0",
-    "solid-js": "^1.7.6",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
