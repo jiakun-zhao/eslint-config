@@ -10,6 +10,7 @@
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
   "main": ".eslintrc.cjs",
   "files": [
+    "overrides",
     ".eslintrc.cjs",
     "package.json"
   ],

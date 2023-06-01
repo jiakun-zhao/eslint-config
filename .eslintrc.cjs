@@ -8,10 +8,11 @@ module.exports = {
     'plugin:unocss/recommended',
   ],
   overrides: [
-    require('./overrides/mdx.cjs'),
     require('./overrides/astro.cjs'),
-    require('./overrides/vue.cjs'),
     require('./overrides/jsonc.cjs'),
+    require('./overrides/mdx.cjs'),
+    require('./overrides/solid.cjs'),
+    require('./overrides/vue.cjs'),
   ],
   rules: {
     // https://eslint.org/docs/latest/rules/:rule-name
