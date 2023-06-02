@@ -12,15 +12,6 @@ module.exports = {
     'vue/static-class-names-order': 'warn',
   },
   overrides: [
-    {
-      // https://github.com/ota-meshi/eslint-plugin-jsonc
-      files: ['*.json', '*.json5', '*.jsonc'],
-      rules: {
-        'jsonc/sort-keys': 'off',
-        'jsonc/key-name-casing': 'off',
-        'jsonc/array-bracket-newline': ['error', 'consistent'],
-      },
-    },
     // {
     //   // react: https://github.com/jsx-eslint/eslint-plugin-react/tree/master#list-of-supported-rules
     //   files: ['*.jsx', '*.tsx'],

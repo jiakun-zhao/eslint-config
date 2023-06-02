@@ -10,7 +10,7 @@
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
   "main": ".eslintrc.cjs",
   "files": [
-    ".eslintrc.cjs",
+    "index.cjs",
     "package.json"
   ],
   "scripts": {
