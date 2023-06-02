@@ -1,54 +1,11 @@
-# @jiakun-zhao/eslint-config
+### @jiakun-zhao/eslint-config
 
-#### Install
+<br />
+ 
+![npm](https://img.shields.io/npm/v/@jiakun-zhao/eslint-config?color=%236054ba)
+
+Extends [antfu/eslint-config](https://github.com/antfu/eslint-config), and add some rules...
 
 ```bash
-pnpm i -D @jiakun-zhao/eslint-config
-```
-
-#### Config
-
-Create `.eslintrc` file in your project root directory, and add the following content:
-
-```json
-{
-    "extends": "@jiakun-zhao"
-}
-```
-
-Or add the following content to your `package.json`:
-
-```json
-{
-    "eslintConfig": {
-        "extends": "@jiakun-zhao"
-    }
-}
-```
-
-#### Config VS Code
-
-Install VS Code `ESLint` extension and create `.vscode/settings.json`
-
-```json
-{
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.formatOnSave": false,
-  // "prettier.enable": false,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "astro",
-    "json",
-    "jsonc",
-    "json5",
-    "html",
-    "vue",
-    "mdx"
-  ]
-}
+ni -D @jiakun-zhao/eslint-config
 ```
