@@ -1,6 +1,6 @@
 {
   "name": "@jiakun-zhao/eslint-config",
-  "version": "0.3.7",
+  "version": "0.4.0",
   "description": "Jiakun's ESLint config.",
   "keywords": [
     "eslint-config"
@@ -14,9 +14,6 @@
   ],
   "scripts": {
     "release": "bumpp && pnpm publish"
-  },
-  "eslintConfig": {
-    "extends": "@jiakun-zhao"
   },
   "dependencies": {
     "@antfu/eslint-config": "^0.39.4"
