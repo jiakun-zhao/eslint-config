@@ -8,10 +8,9 @@
   "homepage": "https://github.com/jiakun-zhao/eslint-config",
   "license": "MIT",
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
-  "main": ".eslintrc.cjs",
+  "main": "index.cjs",
   "files": [
-    "index.cjs",
-    "package.json"
+    "index.cjs"
   ],
   "scripts": {
     "release": "bumpp && pnpm publish"
