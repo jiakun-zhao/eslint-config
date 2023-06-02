@@ -37,7 +37,6 @@ module.exports = {
         'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never', propElementValues: 'always' }],
         'react/jsx-closing-tag-location': 'error',
         'react/jsx-closing-bracket-location': 'error',
-        'react/jsx-boolean-value': ['error', 'never'],
         'react/destructuring-assignment': ['error', 'never'],
         'react/no-unknown-property': 'off',
       },
