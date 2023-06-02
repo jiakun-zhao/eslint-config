@@ -73,7 +73,7 @@ module.exports = {
       rules: {
         'indent': 'off',
         'react/jsx-indent': 'off',
-        'react/jsx-equals-spacing': 'off',
+        'react/jsx-tag-spacing': 'off',
       },
     },
     {
