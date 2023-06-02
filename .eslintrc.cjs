@@ -1,8 +1,5 @@
 module.exports = {
-  extends: [
-    '@antfu',
-    '@antfu/eslint-config-react',
-  ],
+  extends: '@antfu',
   rules: {
     // https://eslint.org
     // https://typescript-eslint.io
@@ -27,6 +24,7 @@ module.exports = {
     {
       // react: https://github.com/jsx-eslint/eslint-plugin-react/tree/master#list-of-supported-rules
       files: ['*.jsx', '*.tsx'],
+      extends: '@antfu/eslint-config-react',
       rules: {
         'react/jsx-wrap-multilines': ['error', { declaration: 'parens-new-line', assignment: 'parens-new-line', return: 'parens-new-line', arrow: 'parens-new-line', condition: 'parens-new-line', logical: 'parens-new-line', prop: 'parens-new-line' }],
         'react/jsx-tag-spacing': ['error', { closingSlash: 'never', beforeClosing: 'never' }],
