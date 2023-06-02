@@ -28,6 +28,10 @@ module.exports = {
     'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }],
     'key-spacing': ['error', { beforeColon: false, afterColon: true, mode: 'strict' }],
 
+    // https://typescript-eslint.io/rules/{:rule-name(no-non-null-assertion)}
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+
     // import: 还不知道对应每个是啥意思
     'import/order': 'error',
     'import/first': 'error',
