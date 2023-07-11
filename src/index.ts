@@ -1,4 +1,6 @@
-module.exports = {
+import type { ESLintConfig } from './types'
+
+export default <ESLintConfig>{
   extends: ['@antfu'],
   rules: {
     'brace-style': ['warn', '1tbs'],

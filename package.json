@@ -2,27 +2,38 @@
   "name": "@jiakun-zhao/eslint-config",
   "version": "1.0.0",
   "description": "Jiakun's ESLint config.",
+  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jiakun-zhao/eslint-config",
   "keywords": [
     "eslint-config"
   ],
-  "homepage": "https://github.com/jiakun-zhao/eslint-config",
-  "license": "MIT",
-  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
-  "main": "index.cjs",
+  "main": "dist/index.cjs",
   "files": [
-    "index.cjs"
+    "dist/index.cjs",
+    "package.json"
   ],
   "scripts": {
-    "release": "bumpp && pnpm publish"
-  },
-  "dependencies": {
-    "@antfu/eslint-config": "^0.39.4"
-  },
-  "devDependencies": {
-    "bumpp": "^9.1.0",
-    "eslint": "^8.41.0"
+    "build": "unbuild",
+    "release": "bumpp && pnpm publish",
+    "stub": "unbuild --stub"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^0.39.7"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.44.0",
+    "@types/node": "^20.4.1",
+    "bumpp": "^9.1.1",
+    "eslint": "^8.44.0",
+    "typescript": "^5.1.6",
+    "unbuild": "^1.2.1",
+    "vitest": "^0.33.0"
+  },
+  "eslintConfig": {
+    "extends": "./dist/index.cjs"
   }
 }
