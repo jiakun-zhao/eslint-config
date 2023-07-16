@@ -40,8 +40,7 @@ export default <ESLintConfig>{
     }, {
       files: ['*.jsx', '*.tsx'],
       extends: [
-        'plugin:react/recommended',
-        'plugin:react/jsx-runtime',
+        'plugin:react/all',
       ],
       parserOptions: {
         ecmaFeatures: {
@@ -51,6 +50,24 @@ export default <ESLintConfig>{
       rules: {
         'react/react-in-jsx-scope': 'off',
         'react/no-unknown-property': 'off',
+        'react/self-closing-comp': 'off',
+
+        'react/jsx-indent': ['error', 2],
+        'react/jsx-indent-props': ['error', 2],
+
+        'react/jsx-filename-extension': 'off',
+        'react/jsx-no-literals': 'off',
+        'react/jsx-max-props-per-line': 'off',
+        // 'react/jsx-space-before-closing': ['error', 'always'],
+        'react/jsx-tag-spacing': ['error', {
+          closingSlash: 'never',
+          beforeSelfClosing: 'always',
+          afterOpening: 'never',
+          beforeClosing: 'never',
+        }],
+        'react/jsx-newline': 'off',
+        'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+        'react/jsx-curly-spacing': ['error', { when: 'never', children: { when: 'never' } }],
       },
     },
   ],
