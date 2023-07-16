@@ -28,5 +28,5 @@ export default <string[]>[
 
   '!.github',
   '!.vitepress',
-  '!.vscode'
+  '!.vscode',
 ]

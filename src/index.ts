@@ -3,21 +3,21 @@ import ignorePatterns from './ignorePatterns'
 
 export default <ESLintConfig>{
   plugins: [
-    'unused-imports'
+    'unused-imports',
   ],
   extends: [
     'standard',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
   ],
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts']
-      }
-    }
+        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'],
+      },
+    },
   },
   ignorePatterns,
   overrides: [
@@ -25,7 +25,7 @@ export default <ESLintConfig>{
       files: ['*.vue'],
       parser: 'vue-eslint-parser',
       parserOptions: {
-        parser: '@typescript-eslint/parser'
+        parser: '@typescript-eslint/parser',
       },
       rules: {
         'vue/component-tags-order': ['error', { order: ['script', 'template', 'style'] }],
@@ -33,9 +33,9 @@ export default <ESLintConfig>{
         'vue/singleline-html-element-content-newline': 'off',
         'vue/max-attributes-per-line': 'off',
         'vue/html-self-closing': 'off',
-        'vue/multi-word-component-names': 'off'
-      }
-    }
+        'vue/multi-word-component-names': 'off',
+      },
+    },
   ],
   rules: {
     // import
@@ -46,13 +46,20 @@ export default <ESLintConfig>{
       ignoreDeclarationSort: true,
       ignoreMemberSort: false,
       memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      allowSeparatedGroups: false
+      allowSeparatedGroups: false,
     }],
 
     // spacing
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'switch-colon-spacing': ['error', { before: false, after: true }],
     'space-before-function-paren': ['error', 'never'],
-    '@typescript-eslint/type-annotation-spacing': ['error', { before: false, after: true }]
-  }
+    '@typescript-eslint/type-annotation-spacing': ['error', { before: false, after: true }],
+
+    // quote
+    'quote-props': ['error', 'consistent-as-needed'],
+
+    // comma
+    'comma-dangle': ['error', 'always-multiline'],
+    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+  },
 }
