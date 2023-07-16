@@ -35,6 +35,7 @@ export default <ESLintConfig>{
         'vue/html-self-closing': 'off',
         'vue/multi-word-component-names': 'off',
         'vue/key-spacing': ['error', { beforeColon: false, afterColon: true }],
+        'vue/object-curly-spacing': ['error', 'always'],
       },
     },
   ],
