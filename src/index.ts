@@ -34,6 +34,7 @@ export default <ESLintConfig>{
         'vue/max-attributes-per-line': 'off',
         'vue/html-self-closing': 'off',
         'vue/multi-word-component-names': 'off',
+        'vue/key-spacing': ['error', { beforeColon: false, afterColon: true }],
       },
     },
   ],
