@@ -32,7 +32,8 @@ export default <ESLintConfig>{
         'vue/padding-line-between-blocks': ['error', 'always'],
         'vue/singleline-html-element-content-newline': 'off',
         'vue/max-attributes-per-line': 'off',
-        'vue/html-self-closing': 'off'
+        'vue/html-self-closing': 'off',
+        'vue/multi-word-component-names': 'off'
       }
     }
   ],
