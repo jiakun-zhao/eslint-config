@@ -9,7 +9,6 @@ export default <ESLintConfig>{
     'standard',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   settings: {
@@ -23,6 +22,7 @@ export default <ESLintConfig>{
   overrides: [
     {
       files: ['*.vue'],
+      extends: ['plugin:vue/vue3-recommended'],
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
@@ -36,6 +36,21 @@ export default <ESLintConfig>{
         'vue/multi-word-component-names': 'off',
         'vue/key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'vue/object-curly-spacing': ['error', 'always'],
+      },
+    }, {
+      files: ['*.jsx', '*.tsx'],
+      extends: [
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
+      ],
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      rules: {
+        'react/react-in-jsx-scope': 'off',
+        'react/no-unknown-property': 'off',
       },
     },
   ],
