@@ -37,7 +37,8 @@ export default <ESLintConfig>{
         'vue/key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'vue/object-curly-spacing': ['error', 'always'],
       },
-    }, {
+    },
+    {
       files: ['*.jsx', '*.tsx'],
       extends: [
         'plugin:react/all',
@@ -72,6 +73,10 @@ export default <ESLintConfig>{
     },
   ],
   rules: {
+    // newline
+    'array-bracket-newline': ['error', 'consistent'],
+    'array-element-newline': ['error', 'consistent'],
+
     // import
     'unused-imports/no-unused-imports': 'error',
     'import/order': 'error',
