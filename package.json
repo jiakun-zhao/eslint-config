@@ -2,12 +2,12 @@
   "name": "@jiakun-zhao/eslint-config",
   "version": "1.0.0",
   "description": "Jiakun's ESLint config.",
-  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/jiakun-zhao/eslint-config",
   "keywords": [
     "eslint-config"
   ],
+  "homepage": "https://github.com/jiakun-zhao/eslint-config",
+  "license": "MIT",
+  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
   "main": "dist/index.cjs",
   "files": [
     "dist/index.cjs",
@@ -15,25 +15,35 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "prepublishOnly": "pnpm build",
     "release": "bumpp && pnpm publish",
     "stub": "unbuild --stub"
   },
-  "peerDependencies": {
-    "eslint": ">=7.4.0"
+  "eslintConfig": {
+    "extends": "./dist/index.cjs"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^0.39.7"
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "vue-eslint-parser": "^9.3.1"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.0",
-    "@types/node": "^20.4.1",
+    "@types/node": "^20.4.2",
     "bumpp": "^9.1.1",
-    "eslint": "^8.44.0",
+    "eslint": "^8.45.0",
     "typescript": "^5.1.6",
     "unbuild": "^1.2.1",
     "vitest": "^0.33.0"
   },
-  "eslintConfig": {
-    "extends": "./dist/index.cjs"
-  }
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "packageManager": "pnpm@8.6.7"
 }

@@ -9,12 +9,6 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "astro",
-    "json",
-    "jsonc",
-    "json5",
-    "html",
-    "vue",
-    "mdx"
+    "vue"
   ]
 }
