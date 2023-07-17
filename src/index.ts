@@ -52,6 +52,8 @@ export default <ESLintConfig>{
         'react/react-in-jsx-scope': 'off',
         'react/no-unknown-property': 'off',
         'react/self-closing-comp': 'off',
+        'react/destructuring-assignment': 'off',
+        'react/no-multi-comp': 'off',
 
         'react/jsx-indent': ['error', 2],
         'react/jsx-indent-props': ['error', 2],
