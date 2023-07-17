@@ -80,6 +80,7 @@ export default <ESLintConfig>{
     'array-element-newline': ['error', 'consistent'],
 
     // import
+    'import/no-unresolved': 'off',
     'unused-imports/no-unused-imports': 'error',
     'import/order': 'error',
     'sort-imports': ['error', {
