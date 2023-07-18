@@ -1,7 +1,7 @@
-import type { ESLintConfig } from './types'
+import { ESLint } from 'eslint'
 import ignorePatterns from './ignorePatterns'
 
-export default <ESLintConfig>{
+export default <ESLint.ConfigData>{
   plugins: [
     'unused-imports',
   ],
@@ -73,15 +73,6 @@ export default <ESLintConfig>{
         'react/jsx-newline': 'off',
         'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
         'react/jsx-curly-spacing': ['error', { when: 'never', children: { when: 'never' } }],
-      },
-    },
-    {
-      files: ['*.astro'],
-      extends: ['plugin:astro/recommended'],
-      parser: 'astro-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro'],
       },
     },
   ],
