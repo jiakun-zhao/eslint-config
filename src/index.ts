@@ -77,6 +77,8 @@ export default <ESLint.ConfigData>{
     },
   ],
   rules: {
+    '@typescript-eslint/no-explicit-any': 'off',
+
     // newline
     'array-bracket-newline': ['error', 'consistent'],
     'array-element-newline': ['error', 'consistent'],
