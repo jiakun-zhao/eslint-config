@@ -77,17 +77,11 @@ export default <ESLintConfig>{
     },
     {
       files: ['*.astro'],
-      plugins: ['astro'],
-      env: {
-        'node': true,
-        'astro/astro': true,
-        'es2020': true,
-      },
+      extends: ['plugin:astro/recommended'],
       parser: 'astro-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro'],
-        sourceType: 'module',
       },
     },
   ],

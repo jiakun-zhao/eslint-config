@@ -23,8 +23,8 @@
     "extends": "./dist/index.cjs"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-astro": "^0.27.2",
     "eslint-plugin-import": "^2.27.5",
@@ -46,5 +46,9 @@
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },
-  "packageManager": "pnpm@8.6.7"
+  "packageManager": "pnpm@8.6.8",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
