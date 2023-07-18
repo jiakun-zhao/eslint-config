@@ -54,6 +54,8 @@ export default <ESLintConfig>{
         'react/self-closing-comp': 'off',
         'react/destructuring-assignment': 'off',
         'react/no-multi-comp': 'off',
+        'react/function-component-definition': 'off',
+        'react/display-name': 'off',
 
         'react/jsx-indent': ['error', 2],
         'react/jsx-indent-props': ['error', 2],
