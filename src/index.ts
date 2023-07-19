@@ -3,6 +3,7 @@ import ignorePatterns from './ignorePatterns'
 
 export default <ESLint.ConfigData>{
   plugins: [
+    'unicorn',
     'unused-imports',
   ],
   extends: [
@@ -99,7 +100,9 @@ export default <ESLint.ConfigData>{
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'switch-colon-spacing': ['error', { before: false, after: true }],
     'space-before-function-paren': ['error', 'never'],
+    'arrow-spacing': ['error', { before: true, after: true }],
     '@typescript-eslint/type-annotation-spacing': ['error', { before: false, after: true }],
+    '@typescript-eslint/space-before-blocks': ['error', 'always'],
 
     // quote
     'quote-props': ['error', 'consistent-as-needed'],
@@ -107,5 +110,8 @@ export default <ESLint.ConfigData>{
     // comma
     'comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+
+    // unicorn
+    'unicorn/prefer-node-protocol': 'error',
   },
 }
