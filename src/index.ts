@@ -101,7 +101,11 @@ export default <ESLint.ConfigData>{
     'switch-colon-spacing': ['error', { before: false, after: true }],
     'space-before-function-paren': ['error', 'never'],
     'arrow-spacing': ['error', { before: true, after: true }],
-    '@typescript-eslint/type-annotation-spacing': ['error', { before: false, after: true }],
+    '@typescript-eslint/type-annotation-spacing': ['error', {
+      before: false,
+      after: true,
+      overrides: { arrow: { before: true, after: true } },
+    }],
     '@typescript-eslint/space-before-blocks': ['error', 'always'],
 
     // quote
