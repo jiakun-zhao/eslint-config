@@ -5,6 +5,7 @@ export default <ESLint.ConfigData>{
   plugins: [
     'unicorn',
     'unused-imports',
+    'antfu',
   ],
   extends: [
     'standard',
@@ -79,6 +80,7 @@ export default <ESLint.ConfigData>{
   ],
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
 
     // newline
     'array-bracket-newline': ['error', 'consistent'],
@@ -117,5 +119,8 @@ export default <ESLint.ConfigData>{
 
     // unicorn
     'unicorn/prefer-node-protocol': 'error',
+
+    // antfu
+    'antfu/if-newline': 'error',
   },
 }
