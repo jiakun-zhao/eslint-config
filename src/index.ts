@@ -59,7 +59,6 @@ export default <ESLint.ConfigData>{
         'react/display-name': 'off',
         'react/button-has-type': 'off',
         'react/no-children-prop': 'off',
-        'react/jsx-one-expression-per-line': 'off',
 
         'react/jsx-indent': ['error', 2],
         'react/jsx-indent-props': ['error', 2],
@@ -76,7 +75,7 @@ export default <ESLint.ConfigData>{
           beforeClosing: 'never',
         }],
         'react/jsx-newline': 'off',
-        'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+        'react/jsx-one-expression-per-line': 'off',
         'react/jsx-curly-spacing': ['error', { when: 'never', children: { when: 'never' } }],
       },
     },
