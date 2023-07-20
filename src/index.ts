@@ -57,6 +57,7 @@ export default <ESLint.ConfigData>{
         'react/no-multi-comp': 'off',
         'react/function-component-definition': 'off',
         'react/display-name': 'off',
+        'react/button-has-type': 'off',
 
         'react/jsx-indent': ['error', 2],
         'react/jsx-indent-props': ['error', 2],
