@@ -61,6 +61,7 @@ export default <ESLint.ConfigData>{
         'react/jsx-indent': ['error', 2],
         'react/jsx-indent-props': ['error', 2],
 
+        'react/jsx-max-depth': 'off',
         'react/jsx-filename-extension': 'off',
         'react/jsx-no-literals': 'off',
         'react/jsx-max-props-per-line': 'off',
