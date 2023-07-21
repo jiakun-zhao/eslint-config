@@ -76,6 +76,7 @@ export default <ESLint.ConfigData>{
         }],
         'react/jsx-newline': 'off',
         'react/jsx-one-expression-per-line': 'off',
+        'react/jsx-no-bind': 'off',
         'react/jsx-curly-spacing': ['error', { when: 'never', children: { when: 'never' } }],
       },
     },
