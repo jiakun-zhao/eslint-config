@@ -9,6 +9,11 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "vue"
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
   ]
 }
