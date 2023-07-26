@@ -1,14 +1,13 @@
 {
   "name": "@jiakun-zhao/eslint-config",
-  "version": "1.1.12",
-  "packageManager": "pnpm@8.6.10",
+  "version": "1.2.0",
   "description": "Jiakun's ESLint config.",
-  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/jiakun-zhao/eslint-config",
   "keywords": [
     "eslint-config"
   ],
+  "homepage": "https://github.com/jiakun-zhao/eslint-config",
+  "license": "MIT",
+  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
   "main": "dist/index.cjs",
   "files": [
     "dist/index.cjs",
@@ -20,8 +19,8 @@
     "release": "bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
     "stub": "unbuild --stub"
   },
-  "peerDependencies": {
-    "eslint": ">=7.4.0"
+  "eslintConfig": {
+    "extends": "./dist/index.cjs"
   },
   "dependencies": {
     "@antfu/eslint-config": "^0.39.8",
@@ -35,7 +34,8 @@
     "typescript": "^5.1.6",
     "unbuild": "^1.2.1"
   },
-  "eslintConfig": {
-    "extends": "./dist/index.cjs"
-  }
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "packageManager": "pnpm@8.6.10"
 }
