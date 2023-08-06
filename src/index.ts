@@ -25,6 +25,7 @@ export default <ESLint.ConfigData>{
     'react/display-name': 'off',
     'react/button-has-type': 'off',
     'react/no-children-prop': 'off',
+    'react/jsx-key': 'off',
 
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': ['error', 2],
