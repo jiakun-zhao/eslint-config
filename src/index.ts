@@ -9,6 +9,7 @@ export default <ESLint.ConfigData>{
     'no-console': 'warn',
     'brace-style': ['warn', '1tbs'],
     '@typescript-eslint/brace-style': ['warn', '1tbs'],
+    '@typescript-eslint/ban-ts-comment': ['off'],
 
     // vue
     'vue/singleline-html-element-content-newline': 'off',
