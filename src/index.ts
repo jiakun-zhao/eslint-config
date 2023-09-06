@@ -17,6 +17,8 @@ export default <ESLint.ConfigData>{
     'vue/static-class-names-order': 'warn',
 
     // react & jsx
+    'jsx-quotes': ['error', 'prefer-single'],
+
     'react/react-in-jsx-scope': 'off',
     'react/no-unknown-property': 'off',
     'react/self-closing-comp': 'off',
@@ -27,7 +29,6 @@ export default <ESLint.ConfigData>{
     'react/button-has-type': 'off',
     'react/no-children-prop': 'off',
     'react/jsx-key': 'off',
-
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-max-depth': 'off',
