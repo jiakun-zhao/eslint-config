@@ -11,6 +11,9 @@ export default <ESLint.ConfigData>{
     '@typescript-eslint/brace-style': ['warn', '1tbs'],
     '@typescript-eslint/ban-ts-comment': ['off'],
 
+    // imports
+    'unused-imports/no-unused-imports': 'warn',
+
     // vue
     'vue/singleline-html-element-content-newline': 'off',
     'vue/html-self-closing': 'off',
