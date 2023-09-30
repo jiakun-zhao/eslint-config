@@ -4,6 +4,7 @@ export default <ESLint.ConfigData>{
   extends: [
     '@antfu',
     'plugin:react/recommended',
+    'plugin:unocss/recommended',
   ],
   rules: {
     'no-console': 'warn',
