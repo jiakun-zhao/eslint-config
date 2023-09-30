@@ -3,8 +3,8 @@ import type { ESLint } from 'eslint'
 export default <ESLint.ConfigData>{
   extends: [
     '@antfu',
+    '@unocss',
     'plugin:react/recommended',
-    'plugin:unocss/recommended',
   ],
   rules: {
     'no-console': 'warn',
