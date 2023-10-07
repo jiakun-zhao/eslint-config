@@ -3,7 +3,6 @@ import type { ESLint } from 'eslint'
 export default <ESLint.ConfigData>{
   extends: [
     '@antfu',
-    '@unocss',
     'plugin:react/recommended',
   ],
   rules: {
@@ -44,5 +43,6 @@ export default <ESLint.ConfigData>{
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-no-bind': 'off',
     'react/jsx-curly-spacing': ['error', { when: 'never', children: { when: 'never' } }],
+    'react/jsx-closing-bracket-location': 'warn',
   },
 }

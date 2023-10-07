@@ -47,3 +47,25 @@ ni -D @jiakun-zhao/eslint-config
   ]
 }
 ```
+
+#### Other
+
+UnoCSS
+
+```bash
+pnpm i @unocss/eslint-config
+pnpm i eslint-plugin-solid
+```
+
+```diff
+ "eslintConfig": {
++  "plugins": [
++    "solid"
++  ],
+   "extends": [
+     "@jiakun-zhao",
++    "@unocss",
++    "plugin:solid/recommended"
+   ]
+ }
+```
