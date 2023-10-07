@@ -11,6 +11,8 @@ export default <ESLint.ConfigData>{
     '@typescript-eslint/brace-style': ['warn', '1tbs'],
     '@typescript-eslint/ban-ts-comment': ['off'],
 
+    '@stylistic/ts/brace-style': 'off',
+
     // imports
     'unused-imports/no-unused-imports': 'warn',
 
