@@ -1,5 +1,6 @@
 {
   "name": "@jiakun-zhao/eslint-config",
+  "type": "module",
   "version": "2.0.0",
   "packageManager": "pnpm@8.15.4",
   "description": "Jiakun's ESLint config.",
@@ -9,9 +10,9 @@
   "keywords": [
     "eslint-config"
   ],
-  "main": "dist/index.cjs",
+  "main": "dist/index.mjs",
   "files": [
-    "dist/index.cjs",
+    "dist/index.mjs",
     "package.json"
   ],
   "scripts": {
