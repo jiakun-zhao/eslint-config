@@ -22,7 +22,7 @@ export default antfu({
     },
   },
   astro: isPackageExists('eslint-plugin-astro'),
-})
+}) as unknown
 
 // 'react/react-in-jsx-scope': 'off',
 // 'react/no-unknown-property': 'off',
