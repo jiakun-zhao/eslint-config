@@ -1,28 +1,29 @@
-import antfu from '@antfu/eslint-config'
-import { isPackageExists } from 'local-pkg'
+import antfu from "@antfu/eslint-config";
 
 export default antfu({
   stylistic: {
     overrides: {
       'no-console': 'warn',
-      // typescript
+      'style/brace-style': ['warn', '1tbs'],
       'ts/ban-ts-comment': 'off',
-      // unused-imports
+      'ts/no-unused-expressions': 'off',
       'unused-imports/no-unused-imports': 'warn',
-      // jsx
-      'style/jsx-quotes': ['off', 'prefer-single'],
+      'style/jsx-quotes': ['warn', 'prefer-single'],
       'style/jsx-one-expression-per-line': 'off',
     },
+  },
+  formatters: {
+    css: 'prettier',
   },
   vue: {
     overrides: {
       'vue/html-self-closing': 'off',
       'vue/singleline-html-element-content-newline': 'off',
-      'vue/static-class-names-order': 'warn',
     },
   },
-  astro: isPackageExists('eslint-plugin-astro'),
-}) as unknown
+  astro: true,
+  unocss: true,
+})
 
 // 'react/react-in-jsx-scope': 'off',
 // 'react/no-unknown-property': 'off',
