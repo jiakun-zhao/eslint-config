@@ -29,7 +29,8 @@
     "build": "unbuild",
     "prepublishOnly": "pnpm build",
     "release": "bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
-    "stub": "unbuild --stub"
+    "stub": "unbuild --stub",
+    "dev": "tsx src/index.ts"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0"
@@ -39,6 +40,7 @@
     "@stylistic/eslint-plugin": "^2.8.0",
     "eslint-plugin-antfu": "^2.7.0",
     "eslint-plugin-command": "^0.2.5",
+    "eslint-plugin-import-x": "^4.2.1",
     "eslint-plugin-n": "^17.10.3",
     "eslint-plugin-perfectionist": "^3.6.0",
     "eslint-plugin-unicorn": "^55.0.0",
@@ -51,6 +53,7 @@
     "@types/node": "^22.5.5",
     "bumpp": "^9.5.2",
     "eslint": "^9.11.0",
+    "tsx": "^4.19.1",
     "typescript": "^5.6.2",
     "unbuild": "^2.0.0"
   }
