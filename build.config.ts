@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'url'
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
@@ -8,5 +9,9 @@ export default defineBuildConfig({
   declaration: true,
   rollup: {
     emitCJS: true,
+    inlineDependencies: true,
+  },
+  alias: {
+    '~': fileURLToPath(new URL('./src', import.meta.url)),
   },
 })

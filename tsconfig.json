@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -9,8 +11,19 @@
     "strictNullChecks": true,
     "esModuleInterop": true,
     "skipDefaultLibCheck": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "eslint.config.mjs"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "eslint.config.mjs"
+  ]
 }
