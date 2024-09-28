@@ -24,14 +24,11 @@
     "dist"
   ],
   "scripts": {
-    "inspector": "config-inspector",
-    "inspector-antfu": "config-inspector --basePath=./antfu",
     "build": "unbuild",
     "prepublishOnly": "pnpm build",
     "release": "bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
     "stub": "unbuild --stub",
-    "dev": "tsx src/index.ts",
-    "typegen": "tsx ./scripts/typegen.ts"
+    "dev": "config-inspector --basePath=./playground"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0"
