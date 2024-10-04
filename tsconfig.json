@@ -6,20 +6,21 @@
     ],
     "module": "ESNext",
     "moduleResolution": "node",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    },
     "resolveJsonModule": true,
     "strict": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
     "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
-    "paths": {
-      "~/*": [
-        "./src/*"
-      ]
-    }
+    "skipLibCheck": true
   },
   "include": [
-    "src"
+    "src",
+    "scripts/typegen.ts"
   ],
   "exclude": [
     "node_modules",

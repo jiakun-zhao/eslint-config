@@ -28,6 +28,7 @@
     "prepublishOnly": "pnpm build",
     "release": "bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
     "stub": "unbuild --stub",
+    "typegen": "tsx ./scripts/typegen.ts",
     "dev": "config-inspector --basePath=./playground"
   },
   "peerDependencies": {

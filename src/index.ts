@@ -1,30 +1,23 @@
-import type { ESLint, Linter } from 'eslint'
+import type { Linter } from 'eslint'
 import stylistic from '@stylistic/eslint-plugin'
-import gitignore from 'eslint-config-flat-gitignore'
-import * as importX from 'eslint-plugin-import-x'
 import n from 'eslint-plugin-n'
-import perfectionist from 'eslint-plugin-perfectionist'
-import unusedImports from 'eslint-plugin-unused-imports'
+import plugins from '~/plugins'
 
-const config: Linter.Config[] = [
-  gitignore(),
-  {
-    name: 'style',
-    plugins: { style: stylistic },
-    rules: {},
-  },
-  {
-    name: 'node',
-    plugins: { node: n },
-  },
-  {
-    name: 'import',
-    plugins: {
-      'perfectionist': perfectionist,
-      'unused-imports': unusedImports,
-      'import-x': importX as unknown as ESLint.Plugin,
-    },
-  },
-]
+function rules(): Partial<Linter.RulesRecord> {
+  return {
+    ...stylistic.configs.customize({ pluginName: 'style', indent: 2, quotes: 'single', semi: false, jsx: true }).rules,
+    ...n.configs['flat/recommended'].rules,
+  }
+}
 
-export default config
+function flatConfigs(): Linter.Config[] {
+  return Array.from(new Set(plugins.map(it => it.group)))
+    .map((group) => {
+      const entries = plugins
+        .filter(it => it.group === group)
+        .map(it => [it.name ?? it.group, it.plugin] as const)
+      return { name: group, plugins: Object.fromEntries(entries) }
+    })
+}
+
+export default [...flatConfigs(), { rules: rules() }] as Linter.Config[]
