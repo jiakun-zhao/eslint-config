@@ -1,17 +1,18 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
-  stylistic: {
-    overrides: {
-      'no-console': 'warn',
-      'style/brace-style': ['warn', '1tbs'],
-      'ts/ban-ts-comment': 'off',
-      'ts/no-unused-expressions': 'off',
-      'unused-imports/no-unused-imports': 'warn',
-      'style/jsx-quotes': ['warn', 'prefer-single'],
-      'style/jsx-one-expression-per-line': 'off',
-    },
+  rules: {
+    'no-console': 'warn',
+    'style/brace-style': ['warn', '1tbs'],
+    'ts/ban-ts-comment': 'off',
+    'ts/no-unused-expressions': 'off',
+    'unused-imports/no-unused-imports': 'warn',
+    'style/jsx-quotes': ['warn', 'prefer-single'],
+    'style/jsx-one-expression-per-line': 'off',
   },
+  ignores: [
+    '**/rule-definition.ts',
+  ],
   // formatters: {
   //   css: 'prettier',
   // },
@@ -47,3 +48,14 @@ export default antfu({
 // 'react/jsx-no-bind': 'off',
 // 'react/jsx-curly-spacing': ['error', { when: 'never', children: { when: 'never' } }],
 // 'react/jsx-closing-bracket-location': 'warn',
+
+// 'jsonc/auto': ['off'],
+// 'jsonc/no-comments': ['off'],
+// 'jsonc/sort-array-values': ['off'],
+// 'jsonc/sort-keys': ['error', 'asc'], // https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-keys.html
+// 'jsonc/vue-custom-block/no-parsing-error': ['off'],
+// 'jsonc/array-bracket-newline': ['error', 'consistent'],
+// 'jsonc/array-bracket-spacing': ['error', 'never'],
+// 'jsonc/array-element-newline': ['error', 'consistent'],
+// 'jsonc/indent': ['error', indent],
+// 'jsonc/key-spacing': ['error', { beforeColon: false, afterColon: true }],

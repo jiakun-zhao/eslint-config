@@ -1,10 +1,17 @@
+import type { Linter } from 'eslint'
 import { fileURLToPath } from 'node:url'
+import stylistic from '@stylistic/eslint-plugin'
 import typegen from 'eslint-typegen'
-import plugins from '~/plugins'
 
-typegen(
-  plugins.map(it => ({ plugins: { [it.name ?? it.group]: it.plugin } })),
+const dtsPath = fileURLToPath(new URL('../shims.d.ts', import.meta.url))
+
+const configs: Linter.Config[] = [
   {
-    dtsPath: fileURLToPath(new URL('../src/rules.ts', import.meta.url)),
+    name: 'style',
+    plugins: {
+      style: stylistic,
+    },
   },
-)
+]
+
+typegen(configs, { dtsPath })

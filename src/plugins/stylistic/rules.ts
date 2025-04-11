@@ -1,0 +1,70 @@
+/* cSpell:disable */
+/* eslint perfectionist/sort-objects: "error" */
+
+import type { Linter } from 'eslint'
+
+export default {
+  'style/array-bracket-newline': ['error', 'consistent'],
+  'style/array-bracket-spacing': ['error', 'never'],
+  'style/array-element-newline': ['error', 'consistent'],
+  'style/arrow-parens': ['error', 'as-needed'],
+  'style/arrow-spacing': ['error', { after: true, before: true }],
+  'style/block-spacing': ['error', 'always'],
+  'style/brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
+  'style/comma-dangle': ['error', 'always-multiline'],
+  'style/comma-spacing': ['error', { after: true, before: false }],
+  // 'style/comma-style': ['error', 'last'],
+  'style/computed-property-spacing': ['error', 'never'],
+  // 'style/curly-newline': ['error', 'always'],
+  'style/dot-location': ['error', 'property'],
+  'style/eol-last': ['error', 'never'],
+  'style/function-call-spacing': ['error', 'never'],
+  'style/function-paren-newline': ['error', 'multiline'],
+  'style/generator-star-spacing': ['error', { after: false, before: true }],
+  'style/implicit-arrow-linebreak': ['error', 'beside'],
+  'style/indent': ['error', 2, { CallExpression: { arguments: 'first' }, MemberExpression: 1, offsetTernaryExpressions: true, SwitchCase: 1, VariableDeclarator: 'first' }],
+  'style/indent-binary-ops': ['error', 2],
+
+  'style/jsx-closing-bracket-location': ['error', 'line-aligned'],
+  'style/jsx-closing-tag-location': ['error', 'line-aligned'],
+  'style/jsx-curly-brace-presence': ['error', { children: 'never', propElementValues: 'always', props: 'never' }],
+  'style/jsx-curly-newline': ['error', 'consistent'],
+  'style/jsx-curly-spacing': ['error', 'never'],
+  'style/jsx-equals-spacing': ['error', 'never'],
+  'style/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+  'style/jsx-function-call-newline': ['error', 'multiline'],
+  'style/jsx-indent-props': ['error', 2],
+  // jsx-max-props-per-line
+  // jsx-newline
+  // jsx-one-expression-per-line
+  // jsx-pascal-case
+  'style/jsx-props-no-multi-spaces': ['error'],
+  'style/jsx-quotes': ['error', 'prefer-single'],
+  'style/jsx-self-closing-comp': ['error', { component: true, html: false }],
+  'style/jsx-tag-spacing': ['error', { afterOpening: 'never', beforeClosing: 'never', beforeSelfClosing: 'always', closingSlash: 'never' }],
+  'style/jsx-wrap-multilines': ['error', {
+    arrow: 'parens-new-line',
+    assignment: 'parens-new-line',
+    condition: 'parens-new-line',
+    declaration: 'parens-new-line',
+    logical: 'parens-new-line',
+    prop: 'parens-new-line',
+    propertyValue: 'parens-new-line',
+    return: 'parens-new-line',
+  }],
+  'style/key-spacing': ['error', { afterColon: true, beforeColon: false }],
+  'style/keyword-spacing': ['error', { after: true, before: true }],
+  'style/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+  'style/member-delimiter-style': ['error', { multiline: { delimiter: 'none' }, singleline: { delimiter: 'comma', requireLast: false } }],
+  'style/multiline-comment-style': ['error', 'starred-block'],
+  'style/no-extra-semi': ['error'],
+  'style/no-floating-decimal': ['error'],
+  'style/no-multi-spaces': ['error'],
+  'style/no-multiple-empty-lines': ['error', { max: 1 }],
+  'style/no-trailing-spaces': ['error'],
+  'style/no-whitespace-before-property': ['error'],
+  'style/nonblock-statement-body-position': ['error', 'below'],
+  'style/object-curly-newline': ['error', { consistent: true }],
+  'style/object-curly-spacing': ['error', 'always'],
+  'style/object-property-newline': ['error'],
+} satisfies Linter.RulesRecord

@@ -1,1 +1,3 @@
-export { default } from '../dist/index.mjs'
+import { defineConfig } from '../dist/index.mjs'
+
+export default defineConfig()

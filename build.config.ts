@@ -1,4 +1,4 @@
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
@@ -8,7 +8,6 @@ export default defineBuildConfig({
   clean: true,
   declaration: true,
   rollup: {
-    emitCJS: true,
     inlineDependencies: true,
   },
   alias: {
