@@ -2,7 +2,7 @@
   "name": "@jiakun-zhao/eslint-config",
   "type": "module",
   "version": "3.1.0",
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.8.1",
   "description": "Jiakun's ESLint config.",
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
   "license": "MIT",
@@ -12,8 +12,8 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "main": "./dist/index.mjs",
@@ -23,35 +23,55 @@
     "dist"
   ],
   "scripts": {
-    "dev": "pnpm build && config-inspector --basePath=./playground",
     "build": "unbuild",
+    "dev": "config-inspector --open=false",
     "prepublishOnly": "pnpm build",
     "release": "bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
     "stub": "unbuild --stub",
-    "test": "vitest",
-    "prebuild": "pnpm script:typegen && pnpm script:stylistic",
-    "script:typegen": "tsx ./scripts/typegen.ts",
-    "script:stylistic": "tsx ./src/plugins/stylistic/script.ts"
+    "test": "vitest"
   },
   "peerDependencies": {
-    "eslint": ">=9.0.0"
+    "eslint": "^9.0.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-vue": "^10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-astro": {
+      "optional": true
+    },
+    "eslint-plugin-vue": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.30.1",
+    "@typescript-eslint/utils": "^8.30.1",
+    "eslint-config-flat-gitignore": "^2.1.0",
+    "eslint-flat-config-utils": "^2.0.1",
+    "eslint-plugin-antfu": "^3.1.1",
+    "eslint-plugin-command": "^3.2.0",
+    "eslint-plugin-import-x": "^4.10.5",
+    "eslint-plugin-jsonc": "^2.20.0",
+    "eslint-plugin-n": "^17.17.0",
+    "eslint-plugin-perfectionist": "^4.11.0",
+    "eslint-plugin-regexp": "^2.7.0",
+    "eslint-plugin-unicorn": "^58.0.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^16.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.11.0",
-    "@antfu/utils": "^9.2.0",
-    "@eslint/compat": "^1.2.8",
     "@eslint/config-inspector": "^1.0.2",
+    "@eslint/core": "^0.13.0",
     "@jiakun-zhao/utils": "^1.3.1",
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "@types/node": "^22.14.0",
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/types": "^8.30.1",
     "bumpp": "^10.1.0",
     "eslint": "^9.24.0",
-    "eslint-config-flat-gitignore": "^2.1.0",
-    "eslint-plugin-jsonc": "^2.20.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-vue": "^10.0.0",
     "eslint-typegen": "^2.1.0",
-    "knitwork": "^1.2.0",
-    "local-pkg": "^1.1.1",
-    "scule": "^1.3.0",
+    "eslint-vitest-rule-tester": "^2.2.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3",
     "unbuild": "^3.5.0",

@@ -12,5 +12,6 @@ export default defineBuildConfig({
   },
   alias: {
     '~': fileURLToPath(new URL('./src', import.meta.url)),
+    '@pkg': fileURLToPath(new URL('./package.json', import.meta.url)),
   },
 })
