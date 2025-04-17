@@ -3,7 +3,7 @@
   "type": "module",
   "version": "4.0.1",
   "packageManager": "pnpm@10.8.1",
-  "description": "Jiakun's ESLint config.",
+  "description": "Jiakun Zhao's ESLint config.",
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
   "license": "MIT",
   "homepage": "https://github.com/jiakun-zhao/eslint-config",
@@ -25,10 +25,11 @@
   "scripts": {
     "build": "unbuild",
     "dev": "config-inspector --open=false",
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "pnpm typegen && pnpm build",
     "release": "bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
     "stub": "unbuild --stub",
-    "test": "vitest"
+    "test": "vitest",
+    "typegen": "tsx ./scripts/typegen.ts"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",
