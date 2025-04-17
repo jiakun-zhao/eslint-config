@@ -2,19 +2,19 @@ import { fileURLToPath } from 'node:url'
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
+  alias: {
+    '@pkg': fileURLToPath(new URL('./package.json', import.meta.url)),
+    '~': fileURLToPath(new URL('./src', import.meta.url)),
+  },
+  clean: true,
+  declaration: true,
   entries: [
     'src/index',
   ],
-  clean: true,
-  declaration: true,
-  rollup: {
-    inlineDependencies: true,
-  },
   externals: [
     '@typescript-eslint/types',
   ],
-  alias: {
-    '~': fileURLToPath(new URL('./src', import.meta.url)),
-    '@pkg': fileURLToPath(new URL('./package.json', import.meta.url)),
+  rollup: {
+    inlineDependencies: true,
   },
 })
