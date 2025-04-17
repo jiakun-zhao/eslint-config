@@ -7,10 +7,13 @@ import { findDynamicPlugin, findParser, tsParser } from '~/utils'
 
 export async function astro(): Promise<FlatConfig> {
   const pluginAstro = await findDynamicPlugin('eslint-plugin-astro')
-  return pluginAstro && createSharedAstroConfig(pluginAstro)
+  return pluginAstro && createSharedAstroConfig(pluginAstro, {
+    'mine/no-blank-before-astro-element': 'warn',
+    'mine/no-blank-in-astro-frontmatter-start': 'warn',
+  })
 }
 
-export function createSharedAstroConfig(plugin: ESLint.Plugin): Linter.Config {
+export function createSharedAstroConfig(plugin: ESLint.Plugin, rules: Linter.RulesRecord = {}): Linter.Config {
   return {
     files: [
       '**/*.astro',
@@ -28,5 +31,6 @@ export function createSharedAstroConfig(plugin: ESLint.Plugin): Linter.Config {
     plugins: {
       astro: plugin,
     },
+    rules,
   }
 }

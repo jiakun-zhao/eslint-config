@@ -1,6 +1,6 @@
 import type { RuleDefinition } from '@eslint/core'
 import type { ESLint, Linter } from 'eslint'
-import type { CustomRule } from '~/types'
+import type { RuleDefinitionOptions } from '~/types'
 import { pluginJsonc, pluginTypescript } from '~/definition'
 
 export const tsParser = findParser(pluginTypescript as any)
@@ -24,7 +24,7 @@ export async function findDynamicPlugin(name: string, key: string = 'default') {
   }
 }
 
-export function createRule<MessageIds extends string = string>(rule: CustomRule<MessageIds>) {
+export function createRule<MessageIds extends string = string>(rule: Required<RuleDefinition<RuleDefinitionOptions<MessageIds>>> & { name: string }) {
   const { name, ...rest } = rule
   rest.meta.docs ??= {}
   rest.meta.docs.url = `https://example.com/${name}`

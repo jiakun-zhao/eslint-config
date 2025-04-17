@@ -1,7 +1,9 @@
-import { runClassic } from 'eslint-vitest-rule-tester'
+import { run } from 'eslint-vitest-rule-tester'
 import rule, { name } from './no-space-in-empty-block'
 
-runClassic(name, rule, {
+run({
+  name,
+  rule,
   valid: [
     'const foo = {}',
     'const foo = { bar:0 }',

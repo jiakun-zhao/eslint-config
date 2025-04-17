@@ -6,6 +6,7 @@ import { ignores } from '~/configs/ignores'
 import { importX } from '~/configs/import-x'
 import { javascript } from '~/configs/javascript'
 import { jsonc } from '~/configs/jsonc'
+import { mine } from '~/configs/mine'
 import { perfectionist } from '~/configs/perfectionist'
 import { regexp } from '~/configs/regexp'
 import { stylistic } from '~/configs/stylistic'
@@ -20,14 +21,15 @@ export default function(options: Options = {}) {
     jsonc(),
     javascript(),
     typescript(),
+    astro(),
+    vue(),
     stylistic(),
+    mine(),
     unusedImports(),
     perfectionist(),
     antfu(),
     importX(),
     unicorn(),
     regexp(),
-    astro(),
-    vue(),
   )
 }

@@ -24,11 +24,9 @@ export default createRule({
         const replaceValue = '{}'
         if (code !== replaceValue) {
           context.report({
-            node,
+            fix: (fixer) => fixer.replaceText(node, replaceValue),
             messageId: 'unexpectedSpace',
-            * fix(fixer) {
-              yield fixer.replaceText(node, replaceValue)
-            },
+            node,
           })
         }
       },
@@ -40,11 +38,9 @@ export default createRule({
         const replaceValue = 'export {}'
         if (code !== replaceValue) {
           context.report({
-            node,
+            fix: (fixer) => fixer.replaceText(node, replaceValue),
             messageId: 'unexpectedSpace',
-            * fix(fixer) {
-              yield fixer.replaceText(node, replaceValue)
-            },
+            node,
           })
         }
       },
