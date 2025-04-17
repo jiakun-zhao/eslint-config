@@ -39,7 +39,7 @@ export default createRule({
         ) {
           context.report({
             fix: (fixer) => fixer.replaceTextRange([left.range[1], right.range[0]], '\n'),
-            loc: { start: right.loc.end, end: left.loc.start },
+            loc: { start: left.loc.end, end: right.loc.start },
             messageId: 'unexpectedBlank',
           })
         }
