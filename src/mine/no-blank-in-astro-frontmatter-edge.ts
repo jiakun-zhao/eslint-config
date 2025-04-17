@@ -23,7 +23,7 @@ export default createRule({
         if (first && first.value === '---' && next && next.loc.start.line !== 2) {
           context.report({
             fix: (fixer) => fixer.replaceTextRange([3, next.range[0]], '\n'),
-            loc: { line: 0, column: 0 },
+            loc: { start: { line: 1, column: 0 }, end: next.loc.start },
             messageId: 'unexpectedBlank',
           })
         }
@@ -39,7 +39,7 @@ export default createRule({
         ) {
           context.report({
             fix: (fixer) => fixer.replaceTextRange([left.range[1], right.range[0]], '\n'),
-            loc: { line: 0, column: 0 },
+            loc: { start: left.loc.end, end: right.loc.start },
             messageId: 'unexpectedBlank',
           })
         }

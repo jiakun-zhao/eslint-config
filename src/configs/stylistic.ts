@@ -29,7 +29,7 @@ export function stylistic(): FlatConfig {
       'style/jsx-closing-tag-location': 'warn',
       'style/jsx-curly-brace-presence': 'warn',
       'style/jsx-curly-newline': 'warn',
-      'style/jsx-curly-spacing': ['warn', { children: { when: 'always' }, when: 'never' }],
+      'style/jsx-curly-spacing': ['warn', { children: true, when: 'never' }],
       'style/jsx-equals-spacing': 'warn',
       'style/jsx-max-props-per-line': 'off',
       'style/jsx-pascal-case': 'warn',

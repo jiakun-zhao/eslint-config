@@ -26,7 +26,7 @@ export default createRule({
           context.report({
             fix: (fixer) => fixer.replaceText(node, replaceValue),
             messageId: 'unexpectedSpace',
-            loc: { line: 0, column: 0 },
+            node,
           })
         }
       },
@@ -40,7 +40,7 @@ export default createRule({
           context.report({
             fix: (fixer) => fixer.replaceText(node, replaceValue),
             messageId: 'unexpectedSpace',
-            loc: { line: 0, column: 0 },
+            node,
           })
         }
       },
