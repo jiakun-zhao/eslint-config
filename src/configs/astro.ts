@@ -8,7 +8,7 @@ import { findDynamicPlugin, findParser, tsParser } from '~/utils'
 export async function astro(): Promise<FlatConfig> {
   const pluginAstro = await findDynamicPlugin('eslint-plugin-astro')
   return pluginAstro && createSharedAstroConfig(pluginAstro, {
-    'mine/multi-root-element-indent': 'warn',
+    'mine/astro-multi-top-level-element-indent': 'warn',
     'mine/no-blank-before-astro-element': 'warn',
     'mine/no-blank-in-astro-frontmatter-edge': 'warn',
   })

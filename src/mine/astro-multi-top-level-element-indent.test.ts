@@ -1,7 +1,7 @@
 import pluginAstro from 'eslint-plugin-astro'
 import { run } from 'eslint-vitest-rule-tester'
 import { createSharedAstroConfig } from '~/configs/astro'
-import rule, { name } from './multi-root-element-indent'
+import rule, { name } from './astro-multi-top-level-element-indent'
 
 run({
   name,

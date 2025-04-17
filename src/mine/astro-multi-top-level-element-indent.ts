@@ -1,13 +1,13 @@
 import type { TSESTree } from '@typescript-eslint/types'
 import { createRule } from '~/utils'
 
-export const name = 'multi-root-element-indent'
+export const name = 'astro-multi-top-level-element-indent'
 
 export default createRule({
   name,
   meta: {
     docs: {
-      description: 'Fix astro multi root element index',
+      description: 'Fix astro multi top level element indent',
     },
     schema: [],
     type: 'layout',
