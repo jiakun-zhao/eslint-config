@@ -1,6 +1,6 @@
 {
-  "biome.enabled": false,
   "cSpell.words": [
     "TSES"
-  ]
+  ],
+  "oxc.enable": false
 }

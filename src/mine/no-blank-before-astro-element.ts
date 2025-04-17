@@ -25,7 +25,7 @@ export default createRule({
         if (!token && !isDocumentStart(node)) {
           context.report({
             fix: (fixer) => fixer.removeRange([0, node.range[0]]),
-            loc: { start: { line: 1, column: 0 }, end: node.loc.start },
+            loc: { line: 0, column: 0 },
             messageId: 'unexpectedBlank',
           })
         }
@@ -33,7 +33,7 @@ export default createRule({
         else if (token && token.value === '---' && (!isLineStart(node) || numOfLines(token, node) !== 2)) {
           context.report({
             fix: (fixer) => fixer.replaceTextRange([token.range[1], node.range[0]], '\n\n'),
-            loc: { start: token.loc.end, end: node.loc.start },
+            loc: { line: 0, column: 0 },
             messageId: 'unexpectedBlank',
           })
         }

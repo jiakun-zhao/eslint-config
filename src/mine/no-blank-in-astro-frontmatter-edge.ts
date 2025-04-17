@@ -23,7 +23,7 @@ export default createRule({
         if (first && first.value === '---' && next && next.loc.start.line !== 2) {
           context.report({
             fix: (fixer) => fixer.replaceTextRange([3, next.range[0]], '\n'),
-            loc: { start: { line: 1, column: 0 }, end: next.loc.start },
+            loc: { line: 0, column: 0 },
             messageId: 'unexpectedBlank',
           })
         }
@@ -31,15 +31,15 @@ export default createRule({
       AstroFragment(node) {
         const [left, right] = context.sourceCode.getTokensBefore(node, { count: 2 })
         if (
-          right
-          && right.value === '---'
-          && left
+          left
           && left.value !== '---'
+          && right
+          && right.value === '---'
           && numOfLines(left, right) !== 1
         ) {
           context.report({
             fix: (fixer) => fixer.replaceTextRange([left.range[1], right.range[0]], '\n'),
-            loc: { start: left.loc.end, end: right.loc.start },
+            loc: { line: 0, column: 0 },
             messageId: 'unexpectedBlank',
           })
         }

@@ -32,7 +32,6 @@ run({
     {
       code: '---\nconst foo = 1\n\n---\n\n<div></div>',
       output: '---\nconst foo = 1\n---\n\n<div></div>',
-      only: true,
     },
   ].map(it => ({ ...it, filename: 'file.astro', errors: [{ messageId: 'unexpectedBlank' }] })),
 
