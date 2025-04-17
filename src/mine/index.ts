@@ -1,13 +1,13 @@
 import type { ESLint } from 'eslint'
 import { version } from '@pkg'
 import _noBlankBeforeAstroElement, { name as noBlankBeforeAstroElement } from './no-blank-before-astro-element'
-import _noBlankInAstroFrontmatterStart, { name as noBlankInAstroFrontmatterStart } from './no-blank-in-astro-frontmatter-start'
+import _noBlankInAstroFrontmatterEdge, { name as noBlankInAstroFrontmatterEdge } from './no-blank-in-astro-frontmatter-edge'
 import _noSpaceInEmptyObject, { name as noSpaceInEmptyObject } from './no-space-in-empty-block'
 
 const rules = {
   [noSpaceInEmptyObject]: _noSpaceInEmptyObject,
   [noBlankBeforeAstroElement]: _noBlankBeforeAstroElement,
-  [noBlankInAstroFrontmatterStart]: _noBlankInAstroFrontmatterStart,
+  [noBlankInAstroFrontmatterEdge]: _noBlankInAstroFrontmatterEdge,
 }
 
 export default {

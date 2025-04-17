@@ -9,7 +9,7 @@ export async function astro(): Promise<FlatConfig> {
   const pluginAstro = await findDynamicPlugin('eslint-plugin-astro')
   return pluginAstro && createSharedAstroConfig(pluginAstro, {
     'mine/no-blank-before-astro-element': 'warn',
-    'mine/no-blank-in-astro-frontmatter-start': 'warn',
+    'mine/no-blank-in-astro-frontmatter-edge': 'warn',
   })
 }
 
