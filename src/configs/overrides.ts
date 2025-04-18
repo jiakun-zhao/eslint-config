@@ -2,7 +2,7 @@ import type { FlatConfig } from '~/types'
 import { packageJsonTopLevelOrder } from '~/definition'
 
 export function overrides(): FlatConfig {
-  const configFileNames = ['eslint', 'astro', 'vite', 'build', 'uno', 'unocss', 'vitest']
+  const configFileNames = ['eslint', 'astro', 'vite', 'build', 'nuxt', 'unocss', 'vitest']
   const extensions = ['js', 'mjs', 'cjs', 'ts', 'mts', 'cts']
   return [
     {
@@ -35,10 +35,7 @@ export function overrides(): FlatConfig {
       ],
       rules: {
         'style/no-multiple-empty-lines': ['warn', { max: 0 }],
-        'jsonc/sort-array-values': [
-          'warn',
-          { order: { type: 'asc' }, pathPattern: '^files$' },
-        ],
+        'jsonc/sort-array-values': ['warn', { order: { type: 'asc' }, pathPattern: '^files$' }],
         'jsonc/sort-keys': [
           'warn',
           { order: packageJsonTopLevelOrder, pathPattern: '^$' },
