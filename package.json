@@ -1,7 +1,7 @@
 {
   "name": "@jiakun-zhao/eslint-config",
   "type": "module",
-  "version": "4.0.5",
+  "version": "4.0.6",
   "packageManager": "pnpm@10.8.1",
   "description": "Jiakun Zhao's ESLint config.",
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
