@@ -26,7 +26,7 @@
     "build": "unbuild",
     "dev": "config-inspector --open=false",
     "prepublishOnly": "pnpm build",
-    "release": "pnpm typegen && bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
+    "release": "bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
     "stub": "unbuild --stub",
     "test": "vitest",
     "typegen": "tsx ./scripts/typegen.ts"
