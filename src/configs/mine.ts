@@ -8,7 +8,8 @@ export function mine(): FlatConfig {
       mine: pluginMine,
     },
     rules: {
-      'mine/no-space-in-empty-block': 'warn',
+      // use unicorn/empty-brace-spaces
+      // 'mine/no-space-in-empty-block': 'warn',
     },
   }
 }

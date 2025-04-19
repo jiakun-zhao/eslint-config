@@ -9,7 +9,7 @@ export function overrides(): FlatConfig {
       name: 'override/sort-config-files',
       files: [
         ...configFileNames.reduce(
-          (acc, cur) => acc.concat(...extensions.map(ext => `${cur}.config.${ext}`)),
+          (acc, cur) => [...acc, ...extensions.map(ext => `${cur}.config.${ext}`)],
           [] as string[],
         ),
       ],

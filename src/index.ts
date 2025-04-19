@@ -1,6 +1,4 @@
-import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import type { RuleOptions } from '../generated-rules'
 import type { Options } from '~/types'
 import { composer } from 'eslint-flat-config-utils'
 import { antfu } from '~/configs/antfu'
@@ -20,7 +18,8 @@ import { unicorn } from '~/configs/unicorn'
 import { unusedImports } from '~/configs/unused-imports'
 import { vue } from '~/configs/vue'
 
-export default function(options: Options = {}): FlatConfigComposer<Linter.Config<Linter.RulesRecord & RuleOptions>> {
+// FlatConfigComposer<Linter.Config<Linter.RulesRecord>>
+export default function(options: Options = {}): FlatConfigComposer {
   return composer(
     ignores(options),
     jsonc(),
@@ -38,5 +37,5 @@ export default function(options: Options = {}): FlatConfigComposer<Linter.Config
     regexp(),
     command(),
     overrides(),
-  ) as any
+  )
 }

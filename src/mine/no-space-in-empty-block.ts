@@ -18,7 +18,7 @@ export default createRule({
   create(context) {
     return {
       ObjectExpression(node) {
-        if (node.properties.length)
+        if (node.properties.length > 0)
           return
         const code = context.sourceCode.getText(node)
         const replaceValue = '{}'
@@ -31,7 +31,7 @@ export default createRule({
         }
       },
       ExportNamedDeclaration(node) {
-        if (node.declaration || node.specifiers.length) {
+        if (node.declaration || node.specifiers.length > 0) {
           return
         }
         const code = context.sourceCode.getText(node)

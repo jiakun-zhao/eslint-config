@@ -18,7 +18,9 @@ export function perfectionist(): FlatConfig {
         type: 'natural',
       }],
       'perfectionist/sort-named-exports': ['warn', { order: 'asc', type: 'natural' }],
-      'perfectionist/sort-named-imports': ['warn', { order: 'asc', type: 'natural' }],
+
+      // 'perfectionist/sort-named-imports': ['warn', { order: 'asc', type: 'natural' }],
+      'sort-imports': ['warn', { ignoreCase: false, ignoreDeclarationSort: true, ignoreMemberSort: false }],
     },
   }
 }

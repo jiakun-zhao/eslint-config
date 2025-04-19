@@ -20,7 +20,7 @@ export default createRule({
     return {
       AstroFragment(node: TSESTree.JSXElement) {
         const children = node.children.filter(it => it.type === 'JSXElement' && it.loc.start.column !== 0)
-        if (!children.length)
+        if (children.length === 0)
           return
         context.report({
           loc: { line: 0, column: 0 },
