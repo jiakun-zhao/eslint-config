@@ -7,7 +7,7 @@ import { findDynamicPlugin, findParser, tsParser } from '~/utils'
 
 export async function vue(): Promise<FlatConfig> {
   const pluginVue = await findDynamicPlugin('eslint-plugin-vue') as typeof import('eslint-plugin-vue')
-  return pluginVue && {
+  return pluginVue && [{
     files: [
       '**/*.vue',
     ],
@@ -88,14 +88,38 @@ export async function vue(): Promise<FlatConfig> {
       'vue/require-macro-variable-name': 'warn',
       'vue/require-typed-ref': 'warn',
       'vue/slot-name-casing': ['warn', 'kebab-case'],
-      'vue/static-class-names-order': 'warn',
+      // 'vue/static-class-names-order': 'warn',
       // 'vue/v-bind-style': ['warn', 'shorthand', { sameNameShorthand: 'always' }],
       'vue/v-bind-style': 'warn',
       'vue/v-for-delimiter-style': ['warn', 'of'],
       'vue/v-on-event-hyphenation': 'warn',
-      'vue/v-on-handler-style': 'warn',
+      // 'vue/v-on-handler-style': 'warn',
       'vue/v-on-style': 'warn',
       'vue/v-slot-style': 'warn',
     },
-  }
+  }, {
+    files: [
+      '**/*.vue',
+    ],
+    name: 'vue/extension',
+    rules: {
+      'vue/array-bracket-newline': ['warn', 'consistent'],
+      'vue/array-bracket-spacing': 'warn',
+      'vue/arrow-spacing': 'warn',
+      'vue/block-spacing': 'warn',
+      'vue/comma-dangle': ['warn', 'always-multiline'],
+      'vue/comma-spacing': 'warn',
+      'vue/comma-style': 'warn',
+      'vue/key-spacing': 'warn',
+      'vue/keyword-spacing': 'warn',
+      'vue/no-multi-spaces': 'warn',
+      'vue/object-curly-newline': ['warn', { consistent: true }],
+      'vue/object-curly-spacing': ['warn', 'always'],
+      'vue/operator-linebreak': ['warn', 'before'],
+      'vue/quote-props': ['warn', 'consistent-as-needed'],
+      'vue/space-in-parens': 'warn',
+      'vue/space-infix-ops': 'warn',
+      'vue/space-unary-ops': 'warn',
+    },
+  }]
 }
