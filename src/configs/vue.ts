@@ -49,7 +49,7 @@ export async function vue(): Promise<FlatConfig> {
       ...pluginVue.configs['flat/essential'].map(c => c.rules).reduce((acc, cur) => ({ ...acc, ...cur }), {}) as any,
 
       'vue/attribute-hyphenation': 'warn',
-      'vue/attributes-order': ['warn', { alphabetical: true, order: ['UNIQUE', 'DEFINITION', 'CONDITIONALS', 'LIST_RENDERING', 'GLOBAL', 'RENDER_MODIFIERS', 'SLOT', 'TWO_WAY_BINDING', 'OTHER_DIRECTIVES', 'CONTENT', 'ATTR_SHORTHAND_BOOL', 'ATTR_STATIC', 'ATTR_DYNAMIC', 'EVENTS'] }],
+      'vue/attributes-order': ['error', { alphabetical: false, order: ['DEFINITION', 'LIST_RENDERING', 'CONDITIONALS', 'RENDER_MODIFIERS', 'UNIQUE', 'TWO_WAY_BINDING', 'OTHER_DIRECTIVES', 'SLOT', 'CONTENT', 'GLOBAL', 'ATTR_SHORTHAND_BOOL', 'ATTR_STATIC', 'ATTR_DYNAMIC', 'EVENTS'] }],
       'vue/block-order': ['warn', { order: ['script', 'template', 'style'] }],
       'vue/block-tag-newline': 'warn',
       'vue/component-name-in-template-casing': 'warn',
