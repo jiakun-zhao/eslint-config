@@ -35,7 +35,7 @@ export function stylistic(): FlatConfig {
       'style/jsx-pascal-case': 'warn',
       'style/jsx-quotes': 'warn',
       'style/jsx-self-closing-comp': ['warn', { component: true, html: false }],
-      'style/jsx-tag-spacing': 'warn',
+      'style/jsx-tag-spacing': ['warn', { afterOpening: 'never', beforeClosing: 'never', beforeSelfClosing: 'always', closingSlash: 'never' }],
       'style/jsx-wrap-multilines': 'warn',
       'style/key-spacing': 'warn',
       'style/keyword-spacing': 'warn',
