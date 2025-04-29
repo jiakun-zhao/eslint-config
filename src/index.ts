@@ -10,15 +10,16 @@ import { javascript } from '~/configs/javascript'
 import { jsonc } from '~/configs/jsonc'
 import { mine } from '~/configs/mine'
 import { overrides } from '~/configs/overrides'
+import { oxlint } from '~/configs/oxlint'
 import { perfectionist } from '~/configs/perfectionist'
 import { regexp } from '~/configs/regexp'
 import { stylistic } from '~/configs/stylistic'
 import { typescript } from '~/configs/typescript'
 import { unicorn } from '~/configs/unicorn'
+import { unocss } from '~/configs/unocss'
 import { unusedImports } from '~/configs/unused-imports'
 import { vue } from '~/configs/vue'
 
-// FlatConfigComposer<Linter.Config<Linter.RulesRecord>>
 export default function(options: Options = {}): FlatConfigComposer {
   return composer(
     ignores(options),
@@ -36,6 +37,8 @@ export default function(options: Options = {}): FlatConfigComposer {
     unicorn(),
     regexp(),
     command(),
+    unocss(),
+    oxlint(),
     overrides(),
   )
 }
