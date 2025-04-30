@@ -38,7 +38,7 @@ export default function(options: Options = {}): FlatConfigComposer {
     regexp(),
     command(),
     unocss(),
-    oxlint(),
     overrides(),
+    options.oxlint?.enable === false ? null : oxlint(),
   )
 }

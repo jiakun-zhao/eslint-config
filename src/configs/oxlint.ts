@@ -9,7 +9,7 @@ export function oxlint(): FlatConfig {
     name: 'oxlint',
     rules: renamePluginsInRules(pluginOxlint.configs.all.rules as Record<string, string>, {
       '@typescript-eslint': 'ts',
-      'import-x': 'import',
+      'import': 'import-x',
     }),
   }
 }

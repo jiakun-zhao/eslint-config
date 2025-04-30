@@ -10,7 +10,6 @@ export default defineBuildConfig({
   declaration: true,
   entries: [
     'src/index',
-    'src/cli',
   ],
   externals: [
     '@typescript-eslint/types',
