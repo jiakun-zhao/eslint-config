@@ -18,9 +18,10 @@ import { unicorn } from '~/configs/unicorn'
 import { unocss } from '~/configs/unocss'
 import { unusedImports } from '~/configs/unused-imports'
 import { vue } from '~/configs/vue'
+import { pluginOxlint } from '~/definition'
 
 export default function(options: Options = {}): FlatConfigComposer {
-  return composer(
+  const result = composer(
     ignores(options),
     jsonc(),
     javascript(),
@@ -39,4 +40,10 @@ export default function(options: Options = {}): FlatConfigComposer {
     unocss(),
     overrides(),
   )
+
+  return options.oxlint?.enable === false
+    ? result
+    : result.append(pluginOxlint.configs['flat/all'])
+      .remove('oxlint/vue-svelte-exceptions')
+      .renamePlugins({ '@typescript-eslint': 'ts', 'import-x': 'import' })
 }
