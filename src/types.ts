@@ -4,7 +4,7 @@ import type { TSESTree } from '@typescript-eslint/types'
 import type { Linter, SourceCode } from 'eslint'
 import type { FlatGitignoreOptions } from 'eslint-config-flat-gitignore'
 
-export type FlatConfig<T = Linter.Config & { plugins?: any }> = Arrayable<Nullable<T>>
+export type FlatConfig<T = Linter.Config & { plugins?: any, languageOptions?: any }> = Arrayable<Nullable<T>>
 
 export interface Options {
   ignores?: string[]

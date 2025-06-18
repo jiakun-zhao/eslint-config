@@ -41,9 +41,9 @@ export default function(options: Options = {}): FlatConfigComposer {
     overrides(),
   )
 
-  return options.oxlint?.enable === false
-    ? result
-    : result.append(pluginOxlint.configs['flat/all'])
+  return options.oxlint?.enable === true
+    ? result.append(pluginOxlint.configs['flat/all'])
       .remove('oxlint/vue-svelte-exceptions')
       .renamePlugins({ '@typescript-eslint': 'ts', 'import-x': 'import' })
+    : result
 }

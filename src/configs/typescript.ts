@@ -12,6 +12,8 @@ export function typescript(): FlatConfig {
         '**/*.?([cm])ts',
         '**/*.?([cm])tsx',
         '**/*.vue',
+        '**/*.astro/*.ts',
+        '*.astro/*.ts',
       ],
       languageOptions: {
         parser: tsParser,
