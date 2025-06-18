@@ -16,9 +16,9 @@ export function findParser(plugin: ESLint.Plugin) {
   throw new Error(`Can not find parser in ${plugin.meta?.name}`)
 }
 
-export async function findDynamicPlugin(name: string, key: string = 'default') {
+export async function findDynamicPlugin<T extends ESLint.Plugin = ESLint.Plugin>(name: string, key: string = 'default') {
   try {
-    return (await import(name))[key] as ESLint.Plugin
+    return (await import(name))[key] as T
   } catch {
     return null
   }
