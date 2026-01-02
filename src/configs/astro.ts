@@ -10,7 +10,6 @@ export async function astro(): Promise<FlatConfig> {
   return pluginAstro && createSharedAstroConfig(pluginAstro, {
     'mine/astro-multi-top-level-element-indent': 'warn',
     'mine/no-blank-before-astro-element': 'warn',
-    'mine/no-blank-in-astro-frontmatter-edge': 'warn',
   })
 }
 
