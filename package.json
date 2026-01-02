@@ -23,11 +23,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsdown",
     "dev": "config-inspector --open=false",
     "prepublishOnly": "pnpm build",
     "release": "bumpp && pnpm publish && npx cnpm sync @jiakun-zhao/eslint-config",
-    "stub": "unbuild --stub",
     "test": "vitest",
     "typegen": "tsx ./scripts/typegen.ts"
   },
@@ -72,9 +71,9 @@
     "eslint-plugin-vue": "^10.6.2",
     "eslint-typegen": "^2.3.0",
     "eslint-vitest-rule-tester": "^3.0.1",
+    "tsdown": "^0.18.4",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "unbuild": "^3.6.1",
     "vitest": "^4.0.16"
   }
 }

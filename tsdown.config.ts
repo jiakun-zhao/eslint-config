@@ -1,20 +1,13 @@
 import { fileURLToPath } from 'node:url'
-import { defineBuildConfig } from 'unbuild'
+import { defineConfig } from 'tsdown'
 
-export default defineBuildConfig({
+export default defineConfig({
+  entry: 'src/index.ts',
   alias: {
     '@pkg': fileURLToPath(new URL('./package.json', import.meta.url)),
     '~': fileURLToPath(new URL('./src', import.meta.url)),
   },
-  clean: true,
-  declaration: true,
-  entries: [
-    'src/index',
-  ],
-  externals: [
+  external: [
     '@typescript-eslint/types',
   ],
-  rollup: {
-    inlineDependencies: true,
-  },
 })
