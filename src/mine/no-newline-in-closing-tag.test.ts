@@ -1,15 +1,17 @@
-import pluginAstro from 'eslint-plugin-astro'
 import { run } from 'eslint-vitest-rule-tester'
-import { createSharedAstroConfig } from '~/configs/astro'
-import rule, { name } from './no-space-in-closing-tag'
+import rule, { name } from './no-newline-in-closing-tag'
 
 run({
   name,
   rule,
-  ...createSharedAstroConfig(pluginAstro),
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   valid: [
     '<div></div>',
-  ].map(code => ({ code, filename: 'file.astro' })),
+  ],
   invalid: [
     {
       code: '<div></div >',
@@ -21,5 +23,5 @@ run({
       output: '<div></div>',
       errors: [{ messageId: 'unexpectedSpace' }],
     },
-   ].map(it => ({ ...it, filename: 'file.astro' })),
+  ],
 })

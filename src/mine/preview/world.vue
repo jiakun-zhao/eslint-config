@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <div a="1"></div>
+  <div a="1">       </div>
 </template>

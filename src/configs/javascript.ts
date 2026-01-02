@@ -1,8 +1,8 @@
 /* eslint perfectionist/sort-objects: "warn" */
 /* cSpell:disable */
 
-import type { FlatConfig } from '~/types'
 import globals from 'globals'
+import type { FlatConfig } from '~/types'
 
 export function javascript(): FlatConfig {
   return {

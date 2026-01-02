@@ -1,6 +1,6 @@
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import type { Options } from '~/types'
 import { composer } from 'eslint-flat-config-utils'
+import type { Options } from '~/types'
 import { antfu } from '~/configs/antfu'
 import { astro } from '~/configs/astro'
 import { command } from '~/configs/command'

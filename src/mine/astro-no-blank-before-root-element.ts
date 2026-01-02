@@ -2,7 +2,7 @@ import type { TSESTree } from '@typescript-eslint/types'
 import { isDocumentStart, isLineStart, numOfLines } from '~/mine/utils'
 import { createRule } from '~/utils'
 
-export const name = 'no-blank-before-astro-element'
+export const name = 'astro-no-blank-before-root-element'
 
 export default createRule({
   name,

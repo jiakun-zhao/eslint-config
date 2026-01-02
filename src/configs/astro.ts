@@ -9,7 +9,10 @@ export async function astro(): Promise<FlatConfig> {
   const pluginAstro = await findDynamicPlugin('eslint-plugin-astro')
   return pluginAstro && createSharedAstroConfig(pluginAstro, {
     'mine/astro-multi-top-level-element-indent': 'warn',
-    'mine/no-blank-before-astro-element': 'warn',
+    'mine/astro-no-blank-before-root-element': 'warn',
+    'mine/no-newline-in-closing-tag': 'warn',
+    'mine/no-space-before-opening-tag': 'warn',
+    'style/jsx-tag-spacing': ['warn', { afterOpening: 'never', beforeClosing: 'never', beforeSelfClosing: 'always', closingSlash: 'never' }],
   })
 }
 

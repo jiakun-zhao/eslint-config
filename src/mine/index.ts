@@ -1,13 +1,15 @@
 import type { ESLint } from 'eslint'
 import { version } from '@pkg'
 import _astroMultiTopLevelElementIndent, { name as astroMultiTopLevelElementIndent } from './astro-multi-top-level-element-indent'
-import _noBlankBeforeAstroElement, { name as noBlankBeforeAstroElement } from './no-blank-before-astro-element'
-import _noSpaceInEmptyObject, { name as noSpaceInEmptyObject } from './no-space-in-empty-block'
+import _astroNoBlankBeforeAstroElement, { name as astroNoBlankBeforeAstroElement } from './astro-no-blank-before-root-element'
+import _noNewlineInClosingTag, { name as noNewlineInClosingTag } from './no-newline-in-closing-tag'
+import _noSpaceBeforeOpeningTag, { name as noSpaceBeforeOpeningTag } from './no-space-before-opening-tag'
 
 const rules = {
   [astroMultiTopLevelElementIndent]: _astroMultiTopLevelElementIndent,
-  [noBlankBeforeAstroElement]: _noBlankBeforeAstroElement,
-  [noSpaceInEmptyObject]: _noSpaceInEmptyObject,
+  [astroNoBlankBeforeAstroElement]: _astroNoBlankBeforeAstroElement,
+  [noNewlineInClosingTag]: _noNewlineInClosingTag,
+  [noSpaceBeforeOpeningTag]: _noSpaceBeforeOpeningTag,
 }
 
 export default {

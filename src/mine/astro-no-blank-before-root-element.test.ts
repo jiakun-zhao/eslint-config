@@ -1,7 +1,7 @@
 import pluginAstro from 'eslint-plugin-astro'
 import { run } from 'eslint-vitest-rule-tester'
 import { createSharedAstroConfig } from '~/configs/astro'
-import rule, { name } from './no-blank-before-astro-element'
+import rule, { name } from './astro-no-blank-before-root-element'
 
 run({
   name,
