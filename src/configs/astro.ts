@@ -14,27 +14,25 @@ export async function astro(): Promise<FlatConfig> {
   })
 }
 
-export function createSharedAstroConfig(plugin: ESLint.Plugin, rules: Linter.RulesRecord = {}): Linter.Config[] {
-  return [
-    {
-      files: [
-        '**/*.astro',
-      ],
-      languageOptions: {
-        parser: findParser(plugin),
-        parserOptions: {
-          extraFileExtensions: [
-            '.astro',
-          ],
-          parser: tsParser,
-        },
+export function createSharedAstroConfig(plugin: ESLint.Plugin, rules: Linter.RulesRecord = {}): Linter.Config {
+  return {
+    files: [
+      '**/*.astro',
+    ],
+    languageOptions: {
+      parser: findParser(plugin),
+      parserOptions: {
+        extraFileExtensions: [
+          '.astro',
+        ],
+        parser: tsParser,
       },
-      name: 'astro',
-      plugins: {
-        astro: plugin,
-      },
-      processor: (plugin as typeof import('eslint-plugin-astro')).processors?.['client-side-ts'],
-      rules,
     },
-  ]
+    name: 'astro',
+    plugins: {
+      astro: plugin,
+    },
+    processor: (plugin as typeof import('eslint-plugin-astro')).processors?.['client-side-ts'],
+    rules,
+  }
 }
