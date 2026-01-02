@@ -9,9 +9,6 @@ export type FlatConfig<T = Linter.Config & { plugins?: any, languageOptions?: an
 export interface Options {
   ignores?: string[]
   gitignore?: FlatGitignoreOptions
-  oxlint?: {
-    enable?: boolean
-  }
 }
 
 export type TSESNodes<NodeTypes = typeof TSESTree.AST_NODE_TYPES> =
